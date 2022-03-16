@@ -19,7 +19,9 @@ const PORT = process.env.PORT || 8000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 app.use(cors()); //set cors
+app.use(express.static('./public'))
 app.use(express.static('./build/'));
+
 // cors headers
 app.use(function (req, res, next) {
     // Website you wish to allow to connect
